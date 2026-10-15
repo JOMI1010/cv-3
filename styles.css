@@ -286,3 +286,47 @@ footer h2 {
         grid-area: derecha;
     }
 }
+
+
+/* MODO OSCURO AUTOMATICO */
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #0E1B1D;
+        color: white;
+    }
+
+    /* HEADER */
+    header {
+        background-color: #010F11;
+    }
+
+    header::after {
+        background-color: #0E1B1D;
+    }
+
+    /* PARTE CENTRAL */
+    main,
+    .contenido {
+        background-color: #0E1B1D;
+    }
+
+    /* TEXTOS NEGROS A BLANCOS */
+    h2,
+    p,
+    ul li,
+    ul li span,
+    .fecha {
+        color: white;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #010F11;
+    }
+
+    footer::before {
+        background-color: #0E1B1D;
+    }
+}
+
