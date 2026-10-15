@@ -296,7 +296,6 @@ footer h2 {
         color: white;
     }
 
-    /* HEADER */
     header {
         background-color: #010F11;
     }
@@ -305,13 +304,11 @@ footer h2 {
         background-color: #0E1B1D;
     }
 
-    /* PARTE CENTRAL */
     main,
     .contenido {
         background-color: #0E1B1D;
     }
 
-    /* TEXTOS NEGROS A BLANCOS */
     h2,
     p,
     ul li,
@@ -320,7 +317,6 @@ footer h2 {
         color: white;
     }
 
-    /* FOOTER */
     footer {
         background-color: #010F11;
     }
