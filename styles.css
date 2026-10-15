@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F4F1EA;
+    padding: 60px 20px 90px;
+    width: 100%;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.relativo {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    margin-bottom: 25px;
+}
+
+.image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* En Móvil/Tablet: Sello arriba a la derecha */
+.imagerelativo {
+    position: absolute;
+    top: -10px;
+    bottom: auto;
+    right: -10px;
+    width: 90px;
+    height: 90px;
+    z-index: 10;
+}
+
+.header-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: #A39375;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    font-size: 52px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    line-height: 1;
+}
+
+.boton {
+    width: 180px;
+    height: 48px;
+    background-color: #009BB0;
+    color: white;
+    border: 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    padding: 15px 0;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: Georgia, serif;
+    margin: 0 0 15px 0;
+    color: #000000;
+}
+
+h3 {
+    font-size: 13px;
+    color: #A39375;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #000000;
+}
+
+ul li a {
+    color: #009BB0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linea-azul {
+    width: 50px;
+    height: 4px;
+    background-color: #009BB0;
+    margin: 25px 0;
+}
+
+.item-exp {
+    margin-bottom: 20px;
+}
+
+.header-exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fecha {
+    font-size: 12px;
+    color: #888;
+}
+
+footer {
+    position: relative;
+    background-color: #F4F1EA;
+    text-align: center;
+    padding: 80px 20px 40px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+footer h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contacto-linea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.azul {
+    color: #009BB0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.separador {
+    color: #009BB0;
+    font-size: 20px;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.fotos {
+    width: 18px;
+    height: 18px;
+    margin: 0 12px;
+    cursor: pointer none;
+}
+
+/* TABLET (min-width: 600px) */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 72px;
+    }
+}
+
+/* DESKTOP (min-width: 900px) */
+@media (min-width: 900px) {
+
+    header {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        text-align: left;
+        padding: 80px 40px 120px;
+    }
+
+    .relativo {
+        margin-bottom: 0;
+    }
+
+    .imagerelativo {
+        top: auto;
+        bottom: -10px;
+    }
+
+    .header-texto {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 96px;
+    }
+
+    /* Distribución en 2 columnas */
+    .contenido {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        grid-template-areas: "izquierda derecha";
+        gap: 60px;
+        padding: 40px 20px;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .izquierda {
+        grid-area: izquierda;
+    }
+
+    .derecha {
+        grid-area: derecha;
+    }
+}
