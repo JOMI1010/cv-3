@@ -233,14 +233,14 @@ footer h2 {
 }
 
 /* TABLET (min-width: 600px) */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     h1 {
         font-size: 72px;
     }
 }
 
 /* DESKTOP (min-width: 900px) */
-@media (min-width: 900px) {
+@media (min-width: 1440px) {
 
     header {
         flex-direction: row;
